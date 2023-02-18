@@ -18,69 +18,106 @@
             <h4 class="text-3xl font-bold text-slate-500">Geometry Genius</h4>
         </div>
         <a href="blog.html">
-            <button class="text-2xl font-bold text-white p-3 rounded-lg bg-blue-700">Blog</button>
+            <button class="text-2xl font-bold text-white p-3 rounded-lg bg-blue-500 w-full">Blog</button>
         </a>
     </header>
     <main>
-        <section class="py-8 grid grid-cols-3">
-            <div class="grid grid-cols-3 gap-4 col-span-2">
-                <div>
-                    <img src=" ./images/triangle.png" alt="triangle">
-                    <h4>Triangle</h4>
-                    <p>Area(A)=0.5*b*h</p>
-                    <input type="text" name="" id="">
-                    <span>cm</span>
-                    <input type="text"><br>
-                    <button>Calculate</button>
+        <section class="py-8 grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-3 gap-4 col-span-3 rounded-md">
+                <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4">
+                    <div class="flex justify-center mb-4 ">
+                        <img class="w-1/2 h-28" src=" ./images/triangle.png" alt="triangle">
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-700">Triangle</h4>
+                    <p class="mb-4">Area(A) = 0.5 *b * h</p>
+                    <div class="flex justify-center items-center">
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button
+                        class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
-                <div>
-                    <img src="./images/rectangle.png" alt="rectangle">
-                    <h4>Triangle</h4>
-                    <p>Area(A)=0.5*b*h</p>
-                    <input type="text" name="" id="">
-                    <span>cm</span>
-                    <input type="text"><br>
-                    <button>Calculate</button>
+                <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
+                    <div class="flex justify-center mb-4 ">
+                        <img class="w-3/4 h-28" src=" ./images/rectangle.png" alt="rectangle">
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-700">Rectangle</h4>
+                    <p class="mb-4">Area(A) = w * l</p>
+                    <div class="flex justify-center items-center">
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button
+                        class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
-                <div>
-                    <img src="./images/parallelogram.png" alt="parallelogram">
-                    <h4>Triangle</h4>
-                    <p>Area(A)=0.5*b*h</p>
-                    <input type="text" name="" id="">
-                    <span>cm</span>
-                    <input type="text"><br>
-                    <button>Calculate</button>
+                <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
+                    <div class="flex justify-center mb-4 ">
+                        <img class="w-3/4 h-28" src=" ./images/parallelogram.png" alt="parallelogram">
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-700">Parallelogram</h4>
+                    <p class="mb-4">Area(A) = *b * h</p>
+                    <div class="flex justify-center items-center">
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button
+                        class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
-                <div>
-                    <img src="./images/rhombus.png" alt="rhombus">
-                    <h4>Triangle</h4>
-                    <p>Area(A)=0.5*b*h</p>
-                    <input type="text" name="" id="">
-                    <span>cm</span>
-                    <input type="text"><br>
-                    <button>Calculate</button>
+                <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
+                    <div class="flex justify-center mb-4 ">
+                        <img class="w-1/2 h-28 " src=" ./images/rhombus.png" alt="rhombus">
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-700">Rhombus</h4>
+                    <p class="mb-4">Area(A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
+                    <div class="flex justify-center items-center">
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button
+                        class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
-                <div>
-                    <img src="./images/pentagon.png" alt="pentagon">
-                    <h4>Triangle</h4>
-                    <p>Area(A)=0.5*b*h</p>
-                    <input type="text" name="" id="">
-                    <span>cm</span>
-                    <input type="text"><br>
-                    <button>Calculate</button>
+                <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
+                    <div class="flex justify-center mb-4 ">
+                        <img class="w-1/2 h-28" src=" ./images/pentagon.png" alt="pentagon">
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-700">Pentagon</h4>
+                    <p class="mb-4">Area(A)=0.5*b*h</p>
+                    <div class="flex justify-center items-center">
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button
+                        class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
-                <div>
-                    <img src="./images/ellipse.png" alt="ellipse">
-                    <h4>Triangle</h4>
-                    <p>Area(A)=0.5*b*h</p>
-                    <input type="text" name="" id="">
-                    <span>cm</span>
-                    <input type="text"><br>
-                    <button>Calculate</button>
+                <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
+                    <div class="flex justify-center mb-4 ">
+                        <img class="w-1/2 h-28" src=" ./images/ellipse.png" alt="ellipse">
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-700">Ellipse</h4>
+                    <p class="mb-4">Area(A)=0.5*b*h</p>
+                    <div class="flex justify-center items-center">
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <span class="mx-3">cm</span>
+                    </div>
+                    <button
+                        class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
             </div>
             <div>
-
+                <h4 class="text-center text-xl font-bold text-slate-700 border-2 border-inherit h-">Area Calculation
+                </h4>
             </div>
         </section>
     </main>
