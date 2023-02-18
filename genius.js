@@ -3,6 +3,7 @@
 
 randomColor = function (e) {
     e.style.background = "#" + (Math.random() * 0xFFFFFF << 0).toString(16);
+    console.log(e.style.background)
 }
 
 const geometryCalculate = (width, height) => {
@@ -24,8 +25,7 @@ const geometryCalculate = (width, height) => {
         alert('Please insert a Number')
         return;
     }
-    console.log(widthInputValue, heightInputValue)
-    const areaTotal = (widthInputValue * heightInputValue);
+    const areaTotal = (widthInputValue * heightInputValue).toFixed(2);
     return areaTotal;
 };
 
@@ -34,7 +34,7 @@ const createHtml = (name, value) => {
     return `  <li>
   <div class="flex justify-between card-total-show mb-4">
       <p>${name} <span id="rectagle-area">${value} </span> cm<sup>2</sup></p>
-      <button class=" text-white p-1  rounded-lg bg-blue-500 ">Convert to
+      <button class=" text-white p-1  rounded-lg bg-blue-500 ">Convt to
           m<sup>2</sup></button>
   </div>
 </li>`
@@ -42,11 +42,13 @@ const createHtml = (name, value) => {
 
 
 document.getElementById('triangle-btn').addEventListener('click', () => {
-    const areaTotal = geometryCalculate('triangle-width', 'triangle-height')
-    const triangleAreaTotal = 0.5 * areaTotal;
-    if (triangleAreaTotal) {
-
+    const triangle = geometryCalculate('triangle-width', 'triangle-height')
+    const triangleAreaTotal = (0.5 * triangle).toFixed(2);
+    if (!isNaN(triangleAreaTotal)) {
         document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml("Triangle", triangleAreaTotal))
+    }
+    else {
+        return;
     }
 });
 
@@ -63,30 +65,33 @@ document.getElementById('parallelogram-btn').addEventListener('click', () => {
     const parallelogramTotal = geometryCalculate('parallelogram-width', 'parallelogram-height');
     if (parallelogramTotal) {
 
-        document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('Paralogram', parallelogramTotal))
+        document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('Parlogram', parallelogramTotal))
 
     }
 })
 document.getElementById('rhombus-btn').addEventListener('click', () => {
     const rhombus = geometryCalculate('rhombus-width', 'rhombus-height');
+    const rhombusTotal = (0.5 * rhombus).toFixed(2);
 
-    if (rhombus) {
+    if (!isNaN(rhombusTotal)) {
 
-        document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('Rhombus', rhombus))
+        document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('Rhombus', rhombusTotal))
 
     }
 })
 document.getElementById('Pentagon-btn').addEventListener('click', () => {
     const pentagon = geometryCalculate('pentagon-width', 'pentagon-height');
-    if (pentagon) {
+    const pentagonTotal = (0.5 * pentagon).toFixed(2);
+    if (!isNaN(pentagonTotal)) {
 
-        document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('Pentagon', pentagon))
+        document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('Pentagon', pentagonTotal))
 
     }
 })
 document.getElementById('ellipse-btn').addEventListener('click', () => {
-    const ellipseTotal = geometryCalculate('ellipse-width', 'ellipse-height');
-    if (ellipseTotal) {
+    const ellipse = geometryCalculate('ellipse-width', 'ellipse-height');
+    const ellipseTotal = (3.14 * ellipse).toFixed(2);
+    if (!isNaN(ellipseTotal)) {
 
 
         document.getElementById('click-serial').insertAdjacentHTML("beforeend", createHtml('EllipseTotal', ellipseTotal))
