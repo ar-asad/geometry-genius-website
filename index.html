@@ -31,12 +31,12 @@
                     <h4 class="text-2xl font-bold text-slate-700">Triangle</h4>
                     <p class="mb-4">Area(A) = 0.5 *b * h</p>
                     <div class="flex justify-center items-center">
-                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <input id="triangle-width" class="bg-slate-100 rounded w-4/12 p-2" type="text">
                         <span class="mx-3">cm</span>
-                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <input id="triangle-height" class="bg-slate-100 rounded w-4/12 p-2" type="text">
                         <span class="mx-3">cm</span>
                     </div>
-                    <button
+                    <button id="triangle-btn"
                         class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
                 <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
@@ -46,12 +46,12 @@
                     <h4 class="text-2xl font-bold text-slate-700">Rectangle</h4>
                     <p class="mb-4">Area(A) = w * l</p>
                     <div class="flex justify-center items-center">
-                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <input id="rectangle-width" class="bg-slate-100 rounded w-4/12 p-2" type="text">
                         <span class="mx-3">cm</span>
-                        <input class="bg-slate-100 rounded w-4/12 p-2" type="text">
+                        <input id="rectangle-height" class="bg-slate-100 rounded w-4/12 p-2" type="text">
                         <span class="mx-3">cm</span>
                     </div>
-                    <button
+                    <button id="rectangle-btn"
                         class="text-lg font-bold text-white p-2 rounded-lg bg-blue-500 w-full mt-3">Calculate</button>
                 </div>
                 <div onmouseover="randomColor(this)" class="text-center border-2 border-inherit p-4 rounded-md">
@@ -118,8 +118,13 @@
             <div class="border-2 border-inherit text-center">
                 <h4 class="text-center text-xl font-bold text-slate-700 mb-4 ">Area Calculation
                 </h4>
-                <div class="flex justify-between card-total-show">
-                    <p>1.Tiangle <span id="area-tota"> </span>cm<sup>2</sup></p>
+                <div id="triangle-card-cal" class="flex justify-between card-total-show mb-4">
+                    <p>1.Tiangle <span id="triangle-area"> </span> cm<sup>2</sup></p>
+                    <button class=" text-white p-1  rounded-lg bg-blue-500 ">Convert to
+                        m<sup>2</sup></button>
+                </div>
+                <div id="rectangle-card-cal" class="flex justify-between card-total-show">
+                    <p>2.Rectangle <span id="rectagle-area"> </span> cm<sup>2</sup></p>
                     <button class=" text-white p-1  rounded-lg bg-blue-500 ">Convert to
                         m<sup>2</sup></button>
                 </div>
